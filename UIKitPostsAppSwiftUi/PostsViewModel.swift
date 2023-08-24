@@ -37,29 +37,4 @@ class PostsViewModel: ObservableObject {
     }
 }
 
-//final class PostsViewModel: ObservableObject {
-//    var cancellable: Set<AnyCancellable> = []
-//    @Published var allPosts: [Post]=[]
-//    @Published var state: AsyncState = .initial
-//   let service = PostsService()
-//
-//    func getPosts(){
-//        service.fetchPosts()
-//
-//
-//            .receive(on: DispatchQueue.main)
-//            .sink(receiveCompletion: { completion in
-//                switch completion {
-//                case .finished:
-//                    break
-//                case .failure(let err):
-//                    print("Fetch Failed: \(err.localizedDescription)")
-//
-//                }
-//            }, receiveValue: { [weak self] response in
-//                state = .loading(response)
-//                self?.allPosts = response
-//            })
-//            .store(in: &cancellable)
-//    }
-//}
+
