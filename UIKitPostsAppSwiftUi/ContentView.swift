@@ -5,53 +5,34 @@
 //  Created by Syed Raza on 6/22/23.
 //
 
-import SwiftUI
 
+import SwiftUI
 struct ContentView: View {
-    @StateObject var viewModel = PostsViewModel()
+    @ObservedObject var viewModel = PostsViewModel()
+    
     var body: some View {
-        NavigationStack {
-            
-            switch viewModel.state {
-            case .initial:
-                Text("Displaying the posts")
-            case .loading:
-                Text("Loading...")
-            case .loaded:
-                loadPosts()
-            case .error:
-                Text("Sorry! something went wrong..")
-            }
-        }
-        .font(.body).bold()
-    }
-    
-    private func loadPosts() -> some View {
-        VStack {
-            List(viewModel.posts) { post in
-                        
-                        postCell(post)
-                        
-                    }
+        NavigationView {
+            VStack {
+                List(viewModel.allPosts, id: \.self) { post in
+                    Text("\(post.title)")
                 }
+                .listStyle(InsetGroupedListStyle()) // Added listStyle for better visual separation
             }
-            .navigationTitle("Posts")
-            .background(.black)
-            .foregroundColor(.green)
-        }
-        
-    }
-    
-    private func postCell(_ post: Post) -> some View {
-        VStack {
-            Text(post.title)
+            .navigationBarTitle("Posts")
+            .onAppear {
+                viewModel.getPosts() // Change the function name to getPosts
+            }
         }
     }
 }
+
+                  
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
 

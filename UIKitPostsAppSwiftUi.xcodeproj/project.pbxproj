@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E931D4E42A96F11600E6629E /* AsyncState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E931D4E32A96F11600E6629E /* AsyncState.swift */; };
 		E98D09372A9274400040ACE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98D09362A9274400040ACE3 /* AppDelegate.swift */; };
 		E98D09392A9274400040ACE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98D09382A9274400040ACE3 /* SceneDelegate.swift */; };
 		E98D093B2A9274400040ACE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98D093A2A9274400040ACE3 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E931D4E32A96F11600E6629E /* AsyncState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncState.swift; sourceTree = "<group>"; };
 		E98D09332A9274400040ACE3 /* UIKitPostsAppSwiftUi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitPostsAppSwiftUi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98D09362A9274400040ACE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E98D09382A9274400040ACE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				E98D094C2A9274DC0040ACE3 /* PostService.swift */,
 				E98D094E2A92754B0040ACE3 /* PostResponse.swift */,
 				E98D09522A92767F0040ACE3 /* ContentView.swift */,
+				E931D4E32A96F11600E6629E /* AsyncState.swift */,
 			);
 			path = UIKitPostsAppSwiftUi;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			files = (
 				E98D094D2A9274DC0040ACE3 /* PostService.swift in Sources */,
 				E98D094B2A9274710040ACE3 /* PostsViewModel.swift in Sources */,
+				E931D4E42A96F11600E6629E /* AsyncState.swift in Sources */,
 				E98D09532A92767F0040ACE3 /* ContentView.swift in Sources */,
 				E98D093B2A9274400040ACE3 /* ViewController.swift in Sources */,
 				E98D09372A9274400040ACE3 /* AppDelegate.swift in Sources */,
