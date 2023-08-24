@@ -22,7 +22,7 @@ class PostsViewModel: ObservableObject {
 
         cancellable = service.fetchPosts()
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { [weak self] completion in
+            .sink(receiveCompletion: { completion in
                 switch completion {
                     case .finished:
                         break
